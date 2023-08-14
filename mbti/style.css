@@ -1,0 +1,131 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  user-select: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.container > .img {
+  width: 480px;
+  height: 480px;
+  background-image: url("./assets/images/top.jpg");
+  background-size: cover;
+}
+
+h1 {
+  font-family: "Fleur De Leah", cursive;
+  font-size: 48px;
+  font-weight: 400;
+  margin-bottom: 48px;
+}
+
+.links__wrapper {
+  width: 80%;
+  max-width: 360px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.links__wrapper > * {
+  margin-bottom: 24px;
+}
+
+.button {
+  border: 0 solid #e5e7eb;
+  color: #000000;
+  display: flex;
+  font-family: "Fleur De Leah", cursive;
+  font-size: 1.8rem;
+  font-weight: 500;
+  justify-content: center;
+  line-height: 1.75rem;
+  padding: 0.75rem 1.65rem;
+  position: relative;
+  text-align: center;
+  text-decoration: none #2b2b2b solid;
+  text-decoration-thickness: auto;
+  width: 100%;
+  max-width: 460px;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-1 {
+  background-color: #b6d8cf;
+  margin-top: -6px;
+  transform: rotate(-2deg);
+  z-index: 100;
+}
+
+.button-2 {
+  background-color: #ffffff;
+  transform: rotate(1deg);
+}
+
+.button-3 {
+  background-color: #ffffff;
+  transform: rotate(-0.5deg);
+}
+
+.button:focus {
+  outline: 0;
+}
+
+.button:after {
+  content: "";
+  position: absolute;
+  border: 1px solid #000000;
+  bottom: 4px;
+  left: 4px;
+  width: calc(100% - 1px);
+  height: calc(100% - 1px);
+}
+
+.button:hover:after {
+  bottom: 2px;
+  left: 2px;
+}
+
+footer {
+  font-family: "Babylonica", cursive;
+  margin: 16px 0 64px;
+}
+
+footer p,
+footer a {
+  font-size: 2rem;
+  text-decoration: none;
+  color: #000000;
+}
+
+footer span {
+  font-size: 12px;
+  color: #7bc5b2;
+}
+
+.cta-btn-img {
+  width: 100%;
+  max-width: 460px;
+  margin: -45px 0 0;
+  /* z-index: 100; */
+  transform: rotate(-3deg);
+  display: block;
+}
