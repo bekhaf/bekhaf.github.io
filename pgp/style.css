@@ -1,0 +1,148 @@
+:root {
+  --primary-color: #da1212;
+  --secondary-color: #f4f4f4;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  user-select: none;
+}
+
+body {
+  width: 100vw;
+  background-color: var(--secondary-color);
+  overflow-x: hidden;
+}
+
+h1 {
+  font-family: "Press Start 2P", cursive;
+  font-size: 48px;
+  font-weight: 400;
+  text-align: center;
+  /* color: var(--primary-color); */
+}
+
+.container {
+  overflow: hidden;
+  width: 100vw;
+  max-width: 480px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.container > * {
+  margin-bottom: 12px;
+}
+
+.container > .img {
+  width: 480px;
+  height: 480px;
+  background-image: url("./assets/images/ezgif.com-crop.gif");
+  background-size: cover;
+  background-position: center;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+.btn {
+  font-family: "VT323", monospace;
+  font-size: 32px;
+  text-align: center;
+  width: 80%;
+  padding: 16px 32px;
+  border: none;
+  outline: none;
+  background-color: white;
+  font-size: 25px;
+  color: white;
+  height: auto;
+  margin: 10px;
+  font-family: "VT323";
+  display: block;
+
+  position: relative;
+  display: inline-block;
+
+  cursor: pointer;
+
+  position: relative;
+  display: block;
+  margin: 10px;
+  font-family: "VT323";
+
+  font-size: 25px;
+  color: white;
+  user-select: none;
+  padding: 10px 10px;
+  position: relative;
+  background: black;
+  z-index: 2;
+}
+
+.btn:active {
+  top: 2px;
+}
+
+.btn::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: -10px;
+  right: -10px;
+  background: black;
+  z-index: -1;
+}
+
+.btn::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  left: -6px;
+  right: -6px;
+  background: black;
+  z-index: -1;
+}
+
+.btn img {
+  height: 24px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.cta,
+.cta::before,
+.cta::after {
+  columns: white;
+  background-color: #da1212;
+}
+
+footer {
+  margin-top: 24px;
+}
+
+footer,
+footer a {
+  font-family: "Babylonica", cursive;
+  text-decoration: none;
+  font-size: 24px;
+  color: black;
+}
+
+footer span {
+  color: #da1212;
+  font-size: 12px;
+}
