@@ -1,6 +1,13 @@
+@font-face {
+  font-family: q_pixia;
+  src: url("./assets/fonts/q_pixia.ttf");
+}
+
 :root {
-  --primary-color: #da1212;
-  --secondary-color: #f4f4f4;
+  --palette-1: #dddddd;
+  --palette-2: #222831;
+  --palette-3: #30475e;
+  --palette-4: #f05454;
 }
 
 *,
@@ -14,18 +21,26 @@
 
 body {
   width: 100vw;
-  background-color: var(--secondary-color);
+  background-color: var(--palette-1);
   overflow-x: hidden;
 }
 
-h1 {
-  font-family: "Press Start 2P", cursive;
-  font-size: 40px;
-  font-weight: 400;
+h1,
+h2 {
+  font-family: q_pixia, "Press Start 2P", cursive;
+  font-weight: 700;
   text-align: center;
-  margin-bottom: 48px !important;
   display: block;
-  /* color: var(--primary-color); */
+  color: var(--palette-2);
+}
+
+h1 {
+  font-size: 40px;
+  margin-bottom: 48px !important;
+}
+
+h2 {
+  font-size: 32px;
 }
 
 .container {
@@ -55,38 +70,22 @@ h1 {
 }
 
 .btn {
-  font-family: "VT323", monospace;
-  font-size: 32px;
+  font-family: q_pixia, "VT323", monospace;
+  font-size: 24px;
   text-align: center;
   text-decoration: none;
+  display: block;
   width: 80%;
-  padding: 16px 32px;
-  border: none;
-  outline: none;
-  background-color: white;
-  font-size: 25px;
-  color: white;
   height: auto;
+  padding: 4px 0px;
+  border: none;
   margin: 10px;
-  font-family: "VT323";
-  display: block;
-
+  outline: none;
   position: relative;
-  display: inline-block;
-
+  color: var(--palette-1);
+  background: var(--palette-2);
   cursor: pointer;
-
-  position: relative;
-  display: block;
-  margin: 10px;
-  font-family: "VT323";
-
-  font-size: 25px;
-  color: white;
   user-select: none;
-  padding: 10px 10px;
-  position: relative;
-  background: black;
   z-index: 2;
 }
 
@@ -102,7 +101,7 @@ h1 {
   bottom: 10px;
   left: -10px;
   right: -10px;
-  background: black;
+  background-color: var(--palette-2);
   z-index: -1;
 }
 
@@ -114,7 +113,7 @@ h1 {
   bottom: 4px;
   left: -6px;
   right: -6px;
-  background: black;
+  background-color: var(--palette-2);
   z-index: -1;
 }
 
@@ -130,7 +129,13 @@ h1 {
 .cta::before,
 .cta::after {
   columns: white;
-  background-color: #da1212;
+  background-color: var(--palette-4);
+}
+.telegram,
+.telegram::before,
+.telegram::after {
+  columns: white;
+  background-color: var(--palette-3);
 }
 
 footer {
@@ -142,10 +147,21 @@ footer a {
   font-family: "Babylonica", cursive;
   text-decoration: none;
   font-size: 24px;
-  color: black;
+  color: var(--palette-2);
 }
 
 footer span {
-  color: #da1212;
+  color: var(--palette-4);
   font-size: 12px;
+}
+
+.col-2 {
+  width: calc(80% + 20px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.w-20 {
+  width: 20px;
 }
